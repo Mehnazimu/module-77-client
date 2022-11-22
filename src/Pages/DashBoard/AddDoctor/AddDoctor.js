@@ -11,7 +11,8 @@ import Loading from '../../Shared/Loading/Loading';
 const AddDoctor = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const imageHostKey = process.env.REACT_APP_imgbb_key;
+    // const imageHostKey = process.env.REACT_APP_imgbb_key;
+    const imageHostKey = "677c12704d9dc8317b5c692ff3007aa1";
     console.log(imageHostKey)
 
     const navigate = useNavigate();

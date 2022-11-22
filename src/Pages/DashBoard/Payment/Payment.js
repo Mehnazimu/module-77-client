@@ -6,7 +6,7 @@ import CheckOutForm from './CheckOutForm';
 
 // REACT_APP_STRIPE_PK=pk_test_51M6WQFHDJfawfvtt90dPljTUGcvYeeqlwmr3eEkMS4I5I7vdfXxRx5qCQ7ITYhG0Q3ZM99mbtkdXM5Qgbz81J3Mq00bZzEuKXU
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
+const stripePromise = loadStripe('pk_test_51M6WQFHDJfawfvtt90dPljTUGcvYeeqlwmr3eEkMS4I5I7vdfXxRx5qCQ7ITYhG0Q3ZM99mbtkdXM5Qgbz81J3Mq00bZzEuKXU');
 
 
 
@@ -19,7 +19,9 @@ const Payment = () => {
             <p>Please pay <strong>${price}</strong> for your appointment on {appointment} at {slot}</p>
             <div className='w-96 my-12'>
                 <Elements stripe={stripePromise}>
-                    <CheckOutForm />
+                    <CheckOutForm 
+                    booking = {booking}
+                    />
                 </Elements>
 
             </div>
